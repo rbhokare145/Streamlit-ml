@@ -7,6 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
+from sklearn.metrics import precision_score, recall_score
 
 # Lets define the main funtion with title and markdown information
 def main():
@@ -39,7 +40,7 @@ def split_data(df):
 def plot_metrics(metrics_list):
     st.set_option('deprecation.showPyplotGlobalUse', False) # To disable warning with pyplot
     if 'Confusion Metrics' in metrics_list:
-        st.subheader('Displaying the Confusion metrics')
+        st.subheader('Displaying the Confusion Metric')
         ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
         st.pyplot()
 
@@ -49,7 +50,7 @@ def plot_metrics(metrics_list):
         st.pyplot()
 
     if 'Precision Recall Curve' in metrics_list:
-        st.subheader('Displaing Precision Recall curve')
+        st.subheader('Displaing Precision Recall Curve')
         PrecisionRecallDisplay.from_estimator(model, X_test, y_test)
         st.pyplot()
     
