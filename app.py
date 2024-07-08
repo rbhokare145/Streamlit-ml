@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib as plt
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
@@ -8,7 +7,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
-from sklearn.metrics import precision_score, recall_score, accuracy_score
 
 # Lets define the main funtion with title and markdown information
 def main():
